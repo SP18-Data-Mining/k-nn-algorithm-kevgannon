@@ -18,7 +18,6 @@ with open('fruit_data_with_colors.txt','r') as tsv:
 			trainingData.append(line.strip().split('\t'))
 		entryCount = entryCount + 1
 
-# Set label of first entry as starting similar item.
 for i in range(1,len(testData)):
 	testWidth = float(testData[i][4])
 	testHeight = float(testData[i][5])
@@ -28,7 +27,7 @@ for i in range(1,len(testData)):
 	similarEntryLabel = trainingData[0][0]
 	similarEntryName = trainingData[0][1]
 		
-	# Compare width and height of current test entry with the remaining trainings entry's.
+	# Compare width and height of current test entry with the remaining training entry's.
 	for j in range(len(trainingData)):
 		trainWidth = float(trainingData[j][4])
 		trainHeight = float(trainingData[j][5])
